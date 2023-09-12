@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}HOME PAGE{% endblock title %}
+
+{% block content %}
+    <div class="contain-all">
+		<button class="close">
+				<i class="fa-solid fa-xmark" style="color: #000000;"></i>
+		</button>
+		<div class="overlay"></div>
+		<div class="language-option">
+				<select>
+					<option value="en">EN</option>
+					<option value="vi">VI</option>
+				</select>
+		</div>
+		<div id="site-search" class="site-nav-container" tabindex="-1">
+			<div class="site-nav-container-last">
+				<p keylanguage="tim_kiem" class="title lang">Tìm kiếm</p>
+				<div class="search-box wpo-wrapper-search">
+					<form action="/search" class="searchform searchform-categoris ultimate-search">
+						<div class="wpo-search-inner">
+							<input keylanguage="tim_kiem_san_pham" required="" id="inputSearchAuto" name="q" maxlength="40" autocomplete="off" class="searchinput input-search search-input langplaceholder" type="text" size="20" placeholder="Tìm kiếm sản phẩm...">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

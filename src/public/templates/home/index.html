@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}HADES SINGAPORE{% endblock title %}
+{% block content %}
+    <div class="contain-img">
+		<img src="{% static 'images/slideshow_1.jpeg' %}">
+	</div>
+	<div class="body-below">
+		<div class="img-product">
+			<img src="{% static 'images/pic.png' %}">
+			<img src="{% static 'images/pic1.png' %}">
+			<img src="{% static 'images/pic2.png' %}">
+		</div>
+	</div>
+{% endblock content %}

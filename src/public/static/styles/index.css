@@ -1,0 +1,492 @@
+*{
+	margin: 0;
+/*	height: 100%;*/
+	text-decoration:none;
+	overflow-x: hidden;
+	font-family: 'Quicksand', sans-serif;
+	margin: 0;
+	padding: 0;
+
+
+}
+.contain-img{
+	width: 100%;
+}
+.contain-img img {
+	width: 100%;background-size: cover;
+}
+.scroller-bar{
+	height: 59px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	text-transform: uppercase;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.list-items {
+	display: flex;
+	list-style: none;
+	justify-content: flex-start;
+}
+.list-items li{
+	margin-left: -18px;
+	display: flex;/* -webkit-align-content: center; */
+	justify-content: center;
+}
+.container-scroller{
+	display: flex;
+	justify-content: flex-end;
+	margin-left: 3.5em;
+	margin-top: 16px;
+}
+.list-items li a {
+	font-size: 0.6875em;padding-left: 2.5em;/* padding-right: 0.5em; *//* transition: opacity 150ms linear, color 150ms linear, background 150ms linear; */color: #272727;outline:none;/*%20width:%20100%;%20*/margin-top:29px;margin-right:31px;
+}
+#nav {
+	width: 75%;
+}
+.index-right{
+	margin-right: 4.5em;
+	display: flex;
+	text-transform: uppercase;
+	width: 26%;
+}
+
+.index-right a {
+	font-size: 0.6875em;
+	color: #272727;
+
+}
+
+.search,
+.cart{
+	margin-top: 0.8em;
+	margin-right: 1em;
+	display: flex;
+}
+.account-links{
+	margin-top: 0.6em;
+	margin-right: 1em;
+}
+.account-links span{
+	margin-right: 2px;
+}
+.select-language{
+	color:#fff;
+	font-family:'Oswald'!important;
+	outline: none;
+	width: 9%;
+  z-index: 3;
+  position: absolute;
+  right: 0;
+}
+.select-language select{
+		text-align: center;
+    border-radius: 12px;
+    width: 43%;
+    height: 1.7em;
+    background-color: #4e4c4cd1;
+    color: white;
+    margin-top: 1em;
+    margin: 1em;
+}
+.container-scroller img{
+	height: 2em;
+	margin-top: 0.2em;
+}
+.main-body{
+	/*background-image: url('../asset/images/slideshow_1.jpeg');*/
+	background-size: cover;
+	height: 1%;
+
+}
+.img-product {
+	display: flex;
+	height: 5em;
+	display: flex;justify-content: space-between;width: 100%;margin: 0.7em;height: 100%;
+}
+.body-below{
+	justify-content: center;
+	display: flex;
+	height: 100%;
+}
+.img-product img:nth-child(1),
+.img-product img:nth-child(2) {
+	margin-right: 0.7em;
+}
+.its-animation ::before{
+	content: "";
+	display: block;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 2;
+	background: #000;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+
+}
+.its-font{
+	padding-bottom: 0px !important;font-family: 'Oswald' !important;width: 100%;font-size: 3.85vw;height: auto!important;overflow: hidden;text-transform: uppercase;-webkit-text-stroke-width: 1px;-webkit-text-fill-color: hsl(0deg 0% 100%);
+}
+
+.wrap-animation{
+	animation: animationText2 15s linear infinite;
+	white-space: nowrap;
+}
+/*.text-animation::before{*/
+/*	content: "";display: block;bottom: -1px;left: 0;right: 0;margin: 0 auto;z-index: 2;background: #000;-webkit-transition:all%200.3slinear;-moz-transition:all%200.3s;linear;-o-transition:%20all%200.3s%20linear;-ms-transition:%20all%200.3s%20linear;transition:%20all%200.3s%20linear;}*/
+/*}*/
+.container-inf-footer{
+	display: flex;
+	flex-direction : column;
+}
+.footer-title {
+	height: 34px;
+}
+.footer{
+	margin: 50px 30px 50px 50px;
+	overflow-y: hidden;
+}
+.container1 h4{
+	letter-spacing: 0.02em;margin: 0 0 20px;position: relative;line-height: 22px;text-transform: uppercase;
+	height: 5%;
+}
+.container1{
+	height: 50%;
+	overflow-y: hidden;
+}
+.footer-content p{
+	font-size: 12px;
+	font-size: 12px;line-height: 20px;letter-spacing: 1px;width: 25em;
+}
+.form-login{
+	height: 100%;
+}
+.form-login{
+	margin-top: 5%;
+}
+.title-login h2{
+	font-family: Zapf Dingbats;
+}
+.fill-in{
+	width: 100%;
+	display: flex;flex-direction: column;
+}
+.icon-field{
+	height: 12%;
+}
+.fill-in input{
+	font-weight: 500;height: 24%;background-color: #ededed;
+	border:1px solid transparent;
+	padding:0 20px;
+	color:black;
+}
+.fill-in{
+	width: 25%;
+	margin-bottom: -5%;
+}
+.contain-button-login button{
+	height: 5em;font-weight: 600;width: 12em;text-transform: uppercase;font-family: -apple-system-footnote;
+}
+.contain-button-login{
+	margin-top: 30px;
+	display: flex;
+}
+.contain-button-login div{
+	padding: 10px;margin-left: 16px;color: #959898;
+}
+.contain-button-login div a {
+	color: black;
+}
+.content-next-to-login-button a{
+	color: #000;
+	text-decoration:none;
+	outline:none;
+}
+.content-next-to-login-button span{
+	color: grey;
+}
+.contain-form-login{
+	display: flex;flex-direction: column;
+}
+.contain-button-login button{
+	background-color: black;color: white;border: none;
+}
+.chua-2cai-fillin{
+	display: flex;flex-direction: column;
+}
+.chua-2cai-fillin input{
+	width: 81%;
+	margin-top: 6px;height: 4em;padding: 0 20px;font-family: -apple-system-footnote;/* font-size: smaller; */font-weight: 500;border: 1px solid transparent;background: #ededed;
+}
+.footwear-list{
+	display: flex;
+}
+.picture img{
+	height: 20em;
+}
+.footwear1{
+	height: 24em;margin: 11%;
+}
+.contain-tags-of-footwear{
+	height: 100%;overflow-y: hidden;
+}
+.item-img{
+	height: 70%;
+}
+.contain-button {
+	display: flex;justify-content: space-around;height: 13%;
+}
+.variant-options{
+	height: 2%;
+}
+.box-product-detail{
+	height: 10%;
+}
+.box-product-detail h3{
+	font-size: inherit;
+}
+.box-product-prices{
+	height: 5%;
+}
+.box-product-prices p{
+	color: black;
+}
+.pro-name a{
+	color: black;
+}
+.contain-button button{
+	margin-right: 11px;height: 77%;margin-top: 5px;border: none;color: white;background-color: black;font-size: x-small;
+	width: 70%;
+}
+.footwear2{
+		height: 24em;margin: 11%;margin-left: -8em;
+
+}
+.scroller-footer{
+	height: 3em;background-color: black;
+}
+.contain-text{
+	color: white;padding: 1em;
+}
+.contain-text span:nth-child(1){
+	font-size: small;color: #00ca8d;
+}
+.contain-text span{
+	color: white;
+	font-size: small;
+}
+.contact-button-icon{
+	cursor: pointer;
+}
+.contact-button-icon svg{
+	width: 80px;height: 80px;fill: none;
+}
+.contact-button-icon g{
+	cx: 40px;cy: 40px;r: 30px;fill: white;
+}
+.contact-button-icon rect{
+	x: 21px;y: 21px;width: 38px;height: 38px;rx: 19px;fill: rgb(236, 85, 105);
+}
+.site-nav-container-last p{
+	font-size: 14px;text-transform: uppercase;font-weight: 500;margin-bottom: 4em;
+}
+.wpo-search-inner input{
+	background: rgba(0, 0, 0, 0.1);width: 15em;border: none;height: 55px;font-size: 15px;font-weight: 500;padding: 0 55px 0 20px;margin: 0;display: inline-block;border-radius: 0;-webkit-appearance: none;transition: all 150ms linear;
+}
+.close{
+	border: none;background-color: white;
+}
+.site-nav-container{
+	flex-direction: column;align-items: center;margin-top: 8%;height: 50vh;
+}
+.contain-all{
+	display: flex;flex-direction: column;align-items: center;
+}
+.language-option{
+	margin-right: 1em;margin-top: 4%;
+}
+.language-option select{
+	margin-right: 33em;
+}
+.close{
+	position: absolute;margin-top: 4em;margin-left: 25em;cursor: pointer;
+}
+.footer{
+	display: flex;
+	overflow-y: hidden;
+}
+.footer-content {
+	width: 37px;
+	height: 25px;
+}
+.container-inf-footer{
+	font-weight: 350;line-height: 20px;font-size: small;width: 24%;
+}
+.item a{
+	color: black;
+}
+.chinh-sach,
+.contact-in4,
+.media{
+	margin-left: 2em;font-weight: 350;font-size: small;width: 25%;
+}
+.chinh-sach ul,
+.contact-in4 ul{
+	line-height: 27px;
+}
+.chinh-sach h4{
+	margin-bottom: -3px;
+}
+.contain-form-login label{
+	font-family: -apple-system-footnote;
+}
+.contain-button-login a,
+.contain-button-login span{
+	font-family: -apple-system-footnote;
+}
+.form-login{
+	margin: 200px 400px 250px 400px;
+}
+.title-login{
+	margin-bottom: 1.5em;
+}
+.media a svg{
+	width: 2em;
+	height: 2em;
+	margin: 0px 3px;
+}
+.below-follow-us{
+	display: flex;
+}
+.media a:nth-child(1),
+.media a:nth-child(2) {
+	height: 2em;
+}
+.verified img{
+		width: 159px;margin-top: 30px;margin-left: -68px;z-index: 11; position: absolute;
+}
+.text-animation span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #e74c3c;
+  transition: .25s;
+}
+.message{
+	padding: 1em;background-color: black;color: white;font-size: small;z-index:5554;
+	position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+}
+.icon-contact {
+	width: 5em;height: 5em;position: absolute;z-index: 11;
+}
+.overlay{
+		background: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4444;
+    opacity: 1;
+    display: none;
+}
+.contain-all{
+		z-index: 5555;
+    padding: 1em;
+    position: fixed;
+    background-color: white;
+    height: 1000vh;
+    right: 0;
+    display: none;
+  }
+.right i,
+.left i{
+	font-size: xxx-large;
+}
+.icon-contact-right{
+	margin-top: 26em;margin-left: 74.5em;
+	width: 5em;height: 5em;position: absolute;z-index: 11;
+
+}
+.icon-contact-left{
+	margin-top: 27em;
+	width: 5em;height: 5em;position: absolute;z-index: 11;
+
+}
+.menu-colorchange{
+	background-color: white;
+}
+.its-font {
+  white-space: nowrap; /* Ngăn chữ xuống dòng */
+  overflow: hidden; /* Ẩn phần chữ vượt quá khung hiển thị */
+  animation: running-animation 5s linear infinite; /* Áp dụng animation trong 5 giây, lặp vô hạn */
+}
+
+@keyframes running-animation {
+  0% {
+    transform: translateX(-100%); /* Di chuyển chữ ra khỏi khung hiển thị từ bên trái */
+  }
+  
+  100% {
+    transform: translateX(100%); /* Di chuyển chữ qua phải đến vị trí ban đầu */
+  }
+}
+.right{
+	margin: 0 auto;cursor: pointer;position: fixed;bottom: 41px;background-color: transparent;border: transparent;background-color: #0061ff;border-radius:100px;height:6em;width:6em;margin-left:-2em;
+}
+.message {
+  border: 3px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.footer-message {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+
+  -moz-animation: my-animation 5s linear infinite;
+  -webkit-animation: my-animation 5s linear infinite;
+  animation: my-animation 5s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+	from {
+		-moz-transform: translateX(100%);
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	to {
+		-moz-transform: translateX(-100%);
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+}

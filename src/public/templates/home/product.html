@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}HOME PAGE{% endblock title %}
+{% block content %}
+    <div class="footwear-list">
+{#    {% for item in products %}#}
+{#		<div class="footwear1">#}
+{#			<div class="contain-tags-of-footwear">#}
+{#				<div class="item-img">#}
+{#					<a href="/products/socks" title="international socks" class="items-socks">#}
+{#						<picture class="picture">#}
+{#			                <img src="{{ item.product_image }}">#}
+{#						</picture>#}
+{#					</a>#}
+{#				</div>#}
+{#				<div class="contain-button">#}
+{#					<button class="buy-it-now">BUY IT NOW</button>#}
+{#					<button class="add-to-cart">ADD TO CART</button>#}
+{#				</div>#}
+{#				<div class="variant-options">#}
+{##}
+{#				</div>#}
+{#				<div class="contain-title-product">#}
+{#					<div class="box-product-detail">#}
+{#						<h3 class="pro-name">#}
+{#							<a href="/products/international-socks" title="international socks">{{ item.product.title }}</a>#}
+{#						</h3>#}
+{#					</div>#}
+{#					<div class="box-product-prices">#}
+{#						<p class="pro-price">{{ item.product.price }} VND</p>#}
+{#					</div>#}
+{#				</div>#}
+{#			</div>#}
+{#		</div>#}
+{#    {% endfor %}#}
+        {% for item in products %}
+		<div class="footwear1">
+			<div class="contain-tags-of-footwear">
+				<div class="item-img">
+					<a href="/products/socks" title="international socks" class="items-socks">
+						<picture class="picture">
+			                <img src="{{ item.img_set.first.img.url }}">
+						</picture>
+					</a>
+				</div>
+				<div class="contain-button">
+					<button class="buy-it-now">BUY IT NOW</button>
+					<button class="add-to-cart">ADD TO CART</button>
+				</div>
+				<div class="variant-options">
+
+				</div>
+				<div class="contain-title-product">
+					<div class="box-product-detail">
+						<h3 class="pro-name">
+							<a href="/products/international-socks" title="international socks">{{ item.title }}</a>
+						</h3>
+					</div>
+					<div class="box-product-prices">
+						<p class="pro-price">{{ item.price }} VND</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    {% endfor %}
+{#		<div class="footwear2">#}
+{#			<div class="contain-tags-of-footwear">#}
+{#				<div class="item-img">#}
+{#					<a href="/products/socks" title="Logo socks" class="items-socks">#}
+{#						<picture class="picture">#}
+{#			                <img src="{% static 'images/white-socks.jpeg' %}">#}
+{#						</picture>#}
+{#					</a>#}
+{#				</div>#}
+{#				<div class="contain-button">#}
+{#					<button class="buy-it-now">BUY IT NOW</button>#}
+{#					<button class="add-to-cart">ADD TO CART</button>#}
+{#				</div>#}
+{#				<div class="variant-options">#}
+{#					<div class="span-white">#}
+{##}
+{#					</div>#}
+{#					<div class="span-black">#}
+{##}
+{#					</div>#}
+{#					<div class="span-skin">#}
+{##}
+{#					</div>#}
+{#				</div>#}
+{#				<div class="contain-title-product">#}
+{#					<div class="box-product-detail">#}
+{#						<h3 class="pro-name">#}
+{#							<a href="/products/Logo-socks" title="Logo socks">lOGO SOCKS</a>#}
+{#						</h3>#}
+{#					</div>#}
+{#					<div class="box-product-prices">#}
+{#						<p class="pro-price">90,000 VND</p>#}
+{#					</div>#}
+{#				</div>#}
+{#			</div>#}
+{#		</div>#}
+	</div>
+{% endblock content %}
