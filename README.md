@@ -264,4 +264,103 @@ Let me explain each part :
 
 `name = " "` : The name argument gives the URL pattern a name, which is important for reversing URLs in code and templates using the {% url% } HTML template. You link your html template with this url by this way "NAME".
 
+##### QUESTION : *Now, I want it shows a text when users click to register button. What do you do ?* #####
 
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+----------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+
+
+                                ANSWER :
+    
+1) Accessing to login-index.html file, I will put register form into `form` tag
+    ``` python
+    <form action="done/" method="post" >
+            //content//
+    </form>
+    ```
+2) Before accessing to urls.py in your app to declare `done/`, you need to initialize class for that html (`login-index.html`) at views.py in the app :
+
+    ```
+   class Login(View):
+    def get(self, request):
+        return render(request=request, template_name="home/login-index.html")
+   ```
+
+3) Now, let's add url for that view :
+
+Moving to urls.py in the app. We will link to that button url `done/` via View in `login-index.html`:
+
+        path('done/', Login.as_view(), name="login-index.html"), 
+    
+DONE !!!
+
+
+##### QUESTION : *I want to print out name of all users who already registered. What should I do?* #####
+
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+----------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+---------------------------------- 5 minute thinking -------------------------------
+
+`ANSWER: `
+
+Similarly to the question before, we firstly create a function in views.py and then declare url in urls.py 
+
+1) Code a function in class of that view from views.py for Login form :
+
+```angular2html
+class Register(View):
+    def get(self, request):
+        return render(request=request, template_name="home/login-index.html")
+```
+
+This is a fundamental class that defines the view for the Login HTML page. Next, we'll need to write the function to display the names and emails of users after they have registered.
+
+So, what is that function ?
+
+```python
+        def post(self, request):
+        try:
+            name = request.POST['name1']
+        except Exception as e:
+            print(e)
+            name = None
+
+        try:
+            email = request.POST['email']
+        except Exception as e:
+            print(e)
+            email = None
+
+        return HttpResponse(f"Name: {name} - Email: {email}")
+```
+
+
+We use " Except as e " instead of " Except" because it helps us print out the specific error what is it.
+
+3) Make sure that we named href of "<a" tag to link to its url :
+
+`					<a href ="{% url 'register-file' %}">Register  </a> `
+
+Here, it names `register-file`
+
+4) Yes, the last step always is declaration its name and url :
+
+`    path('register/', Login.as_view(), name="register-file"),
+`
+
+Now, you will clearly understand the name function in the url path.

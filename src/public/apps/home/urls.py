@@ -5,8 +5,9 @@ from django.conf import settings
 from .views import *
 
 urlpatterns = [
-    path('', Homeview.as_view(),name="index-file"),
+    path('', HomeView.as_view(),name="index-file"),
     path('footwear/', Footwear.as_view(), name="product-file"),
     path('login/', Login.as_view(), name="login"),
+    path('register/', Register.as_view(), name="register-file"),
 
 ]

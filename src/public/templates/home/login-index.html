@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html>
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}HOME PAGE{% endblock title %}
+
+{% block title %}REGISTER{% endblock title %}
 {% block content %}
     	<div class="form-login">
-		<div class="contain-form-login">
-			<div class="title-login">
-				<h2>LOG IN</h2>
-			</div>
-			<div class="chua-2cai-fillin">
-				<label>Email<span style="color: red">*</span></label>
-				<input href="/email">
-			</div>
-			<div class="chua-2cai-fillin">
-				<label style="margin-top: 35px">Password<span style="color: red">*</span></label>
-				<input href="/password">
-			</div>
-			<div class="contain-button-login">
-					<button type='submit'>Log In</button>
-					<div>
-						<a class="lang" keylanguage="quen_mat_khau" href="#">Quên mật khẩu?</a>
-						<span class="lang" keylanguage="hoac">hoặc</span><br><a href="/account/register" class="lang" keylanguage="dang_ky" title="Đăng ký">Đăng ký</a>
-					</div>
-
-			</div>
-		</div>
+            <div class="contain-form-login">
+                <div class="title-login">
+                    <h2>LOG IN</h2>
+                </div>
+                <div class="chua-2cai-fillin">
+                    <label>Email<span style="color: red">*</span></label>
+                    <!-- <input href="/email"> -->
+                    <input type="text" name="email" id="email-input" placeholder="email">
+                </div>
+                <div class="chua-2cai-fillin">
+                    <label style="margin-top: 35px">Password<span style="color: red">*</span></label>
+                    <!-- <input href="/password"> -->
+                    <input type="password" name="password" id="password-input">
+                    {% csrf_token %}
+                </div>
+                <div class="contain-button-login">
+                        <button type="submit">Log In</button>
+                        <div>
+                            <a class="lang" href="#">Forgot password?</a>
+                            <span class="lang" >or</span><br><a href ="{% url 'register-file' %}" class="lang" title="register">REGISTER</a>
+                        </div>
+                </div>
+            </div>
 
 	</div>
 {% endblock content %}
