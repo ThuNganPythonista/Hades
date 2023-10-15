@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}ZERO LEFTOVER{% endblock title %}
+{% block content %}
+    <div class="black-title"></div>
+	<div class="menu-absolute">
+		<div class="chua-title">
+			<h2>VỀ CHÚNG TÔI</h2>
+			<h3>ZERO LEFTOVER - ZERO HUNGER</h3>
+		</div>
+	</div>
+	<div class="chua-anh">
+		<div class="nav">
+				<h4>SỨ MỆNH</h4>
+				<span>Trở thành tổ chức đoàn kết vì tương lai tầm vóc Việt và đồng hành cùng Chương trình Hành động Quốc gia “Không còn nạn đói" ở Việt Nam và thực hiện mục tiêu đảm bảo đủ lương thực, thực phẩm, đáp ứng đủ dinh dưỡng cho người dân nhằm nâng cao thể trạng, trí tuệ, tầm vóc con người Việt Nam; đồng thời thực hiện mục tiêu phát triển bền vững số 2 (SDG2 - Zero Hunger) do Chính phủ Việt Nam cam kết với Tổ chức Liên Hợp Quốc. </span>
+			</div>
+		<video class="vid1" controls>
+        		<source src="{% static 'images/introvideo.mp4' %}">
+        </video>
+	</div>
+	<div class="black"></div>
+	<div class="chua-anh-1">
+        <img src="{% static 'images/lua.jpg' %}">
+
+    		</img>
+		<div class="nav-1">
+				<h4>TẦM NHÌN</h4>
+				<span>Là tổ chức phi lợi nhuận cùng đồng hành với nông dân Việt - nông sản Việt; đảm bảo nguồn lương thực thực phẩm của quốc gia được đến đúng nơi, đúng chỗ và đúng người cần, tránh lãng phí thức ăn và mang lại tầm ảnh hưởng tích cực đến môi trường. </span>
+		</div>
+	</div>
+	<div class="black"></div>
+    <div class="contain-adjust">
+            <img src="{% static 'images/data.jpg' %}">
+	</div>
+{% endblock content %}

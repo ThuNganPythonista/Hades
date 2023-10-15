@@ -1,104 +1,115 @@
 {% extends 'base.html' %}
+
 {% load static %}
-
-{% block title %}HOME PAGE{% endblock title %}
+{% block title %}ZERO LEFTOVER{% endblock title %}
 {% block content %}
-    <div class="footwear-list">
-{#    {% for item in products %}#}
-{#		<div class="footwear1">#}
-{#			<div class="contain-tags-of-footwear">#}
-{#				<div class="item-img">#}
-{#					<a href="/products/socks" title="international socks" class="items-socks">#}
-{#						<picture class="picture">#}
-{#			                <img src="{{ item.product_image }}">#}
-{#						</picture>#}
-{#					</a>#}
-{#				</div>#}
-{#				<div class="contain-button">#}
-{#					<button class="buy-it-now">BUY IT NOW</button>#}
-{#					<button class="add-to-cart">ADD TO CART</button>#}
-{#				</div>#}
-{#				<div class="variant-options">#}
-{##}
-{#				</div>#}
-{#				<div class="contain-title-product">#}
-{#					<div class="box-product-detail">#}
-{#						<h3 class="pro-name">#}
-{#							<a href="/products/international-socks" title="international socks">{{ item.product.title }}</a>#}
-{#						</h3>#}
-{#					</div>#}
-{#					<div class="box-product-prices">#}
-{#						<p class="pro-price">{{ item.product.price }} VND</p>#}
-{#					</div>#}
-{#				</div>#}
-{#			</div>#}
-{#		</div>#}
-{#    {% endfor %}#}
-        {% for item in products %}
-		<div class="footwear1">
-			<div class="contain-tags-of-footwear">
-				<div class="item-img">
-					<a href="/products/socks" title="international socks" class="items-socks">
-						<picture class="picture">
-			                <img src="{{ item.img_set.first.img.url }}">
-						</picture>
-					</a>
-				</div>
-				<div class="contain-button">
-					<button class="buy-it-now">BUY IT NOW</button>
-					<button class="add-to-cart">ADD TO CART</button>
-				</div>
-				<div class="variant-options">
-
-				</div>
-				<div class="contain-title-product">
-					<div class="box-product-detail">
-						<h3 class="pro-name">
-							<a href="/products/international-socks" title="international socks">{{ item.title }}</a>
-						</h3>
-					</div>
-					<div class="box-product-prices">
-						<p class="pro-price">{{ item.price }} VND</p>
-					</div>
-				</div>
+<div class="black-title"></div>
+	<div class="menu-absolute">
+		<div class="chua-title">
+			<h2>TIN NỔI BẬT</h2>
+			<h3>ZERO LEFTOVER - ZERO HUNGER</h3>
+		</div>
+	</div>
+	<div class="chua-anh-anh">
+		<div class="nav-tin-noi-bat">
+				<h4>DÒNG SỰ KIỆN</h4>
+				<nav class="text-center-tinnoibat">
+					<ul class="list-items-tinnoibat">
+						<li>
+							<a class='items' href="{% url 'index-file' %}" title="ALL">Siêu thị bán hàng trên xe tải 'giải cứu' nông sản</a>
+						</li>
+                        		<li>
+                             		<a class='items' href="{% url 'index-file' %}" title="ALL">Người dân nhận dưa hấu 'giải cứu nông sản'</a>
+						</li>
+						<li>
+							<a class='items' href="/collection/bottom" title="BOTTOMS">Nông sản Quảng Ninh được giải cứu</a>
+						</li>
+						<li>
+							<a class='items' href="/collection/outerwear" title="OUTERWEAR">Nhiều khu vực TP HCM ngập sâu do mưa lớn, triều cường</a>
+						</li>
+						<li>
+							<a class='items' href="{% url 'product-file' %}" title="FOOTWEAR">Cơm trưa không thịt của học trò biên ải</a>
+						</li>
+						<li>
+							<a class='items' href="/collection/hat" title="HAT">Giá nông sản tăng mạnh kéo chỉ số hàng hoá hồi phục</a>
+						</li>
+						<li>
+							<a class='items' href="/collection/sale" title="SALE">Giá cà phê trong nước giảm cùng chiều thế giới</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		<video class="video-1-tinoibat" controls>
+                <source src="{% static 'images/video-tinnoibat.mp4' %}">
+        </video>
+	</div>
+	 <h5 class="i-forgot">Người dân kể khoảnh khắc đất đá tràn vào nhà </h5>
+	<div class="black"></div>
+	<div class="content-middle-tinnoibat">
+		 <div class="post-1">
+		 	<h2>Bếp ăn miễn phí của người mẹ mất con vì ung thư</h2>
+		 	<span>5 năm trước, ôm con gái mất trong vòng tay mình, chị Linh tự hứa sẽ dành phần đời còn lại hoàn thành tâm nguyện giúp đỡ người mắc ung thư của con. Người mẹ 41 tuổi, quê Kiên Giang đã hiện thực tâm nguyện ấy bằng bếp ăn 0 đồng rộng 40m2, thuộc đường số 10, phường Trường Thọ, TP Thủ Đức (TP HCM).</span>
+		 </div>
+		 <div class="post-2">
+		 	<h2>Chuỗi sự kiện về giới và nữ quyền dành cho người trẻ</h2>
+		 	<span>Để giúp bạn trẻ hiểu rõ hơn các vấn đề về đa dạng giới, giới tính và bình đẳng giới, Nhà xuất bản Phụ nữ Việt Nam phối hợp các trường đại học và trung học phổ thông trên toàn quốc tổ chức chuỗi sự kiện booktour “Người trẻ và giới”.</span>
+		 </div>
+		 <div class="post-3">
+		 	<h2>Cơm trưa không thịt của học trò biên ải</h2>
+		 	<span>Nhà cách nửa ngọn đồi, mỗi lần đi bộ mất hơn 40 phút, nên Xinh mang theo cơm để ăn trưa tại trường. Hầu như mọi ngày, em chỉ có cơm trắng, ăn kèm một thanh cay, hay bim bim theo cách gọi của học trò Tung Qua Lìn. Mỗi khi xúc một miếng cơm, Xinh lại mút thanh cay để có thêm vị. Cô bé cao gần 1m, nặng 15kg ăn ngon lành, chốc chốc lại cười xấu hổ vì "thực đơn đạm bạc" của mình khi có bạn chạy qua.</span>
+		 </div>
+	</div>
+	<div class="black"></div>
+	<div class="content-middle-2-tinnoibat">
+		<div class="a-1">
+			<div class="a-content-middle-2">
+				<a href=""><h3>Ông bố 4 năm ăn cơm thừa để tiền chữa bệnh cho con</h3></a>
+			</div>
+			<div class="chua-video">
+                <img src="{% static 'images/tinnoibat-anh.jpeg' %}">
 			</div>
 		</div>
-    {% endfor %}
-{#		<div class="footwear2">#}
-{#			<div class="contain-tags-of-footwear">#}
-{#				<div class="item-img">#}
-{#					<a href="/products/socks" title="Logo socks" class="items-socks">#}
-{#						<picture class="picture">#}
-{#			                <img src="{% static 'images/white-socks.jpeg' %}">#}
-{#						</picture>#}
-{#					</a>#}
-{#				</div>#}
-{#				<div class="contain-button">#}
-{#					<button class="buy-it-now">BUY IT NOW</button>#}
-{#					<button class="add-to-cart">ADD TO CART</button>#}
-{#				</div>#}
-{#				<div class="variant-options">#}
-{#					<div class="span-white">#}
-{##}
-{#					</div>#}
-{#					<div class="span-black">#}
-{##}
-{#					</div>#}
-{#					<div class="span-skin">#}
-{##}
-{#					</div>#}
-{#				</div>#}
-{#				<div class="contain-title-product">#}
-{#					<div class="box-product-detail">#}
-{#						<h3 class="pro-name">#}
-{#							<a href="/products/Logo-socks" title="Logo socks">lOGO SOCKS</a>#}
-{#						</h3>#}
-{#					</div>#}
-{#					<div class="box-product-prices">#}
-{#						<p class="pro-price">90,000 VND</p>#}
-{#					</div>#}
-{#				</div>#}
-{#			</div>#}
-{#		</div>#}
+		<div class="a-2">
+			<div class="a-content-middle-2">
+				<a href=""><h3>Trao tặng 1.150 thùng sữa cho bệnh nhi</h3></a>
+			</div>
+			<div class="chua-video">
+                <img src="{% static 'images/thungsua.jpeg' %}">
+			</div>
+		</div>
 	</div>
+	<div class="black"></div>
+	<div class="content-duoi">
+		<div class="contain-text">
+			<a href=""><h3>Lương thực của Việt Nam đủ nuôi sống hơn 100 triệu dân nữa</h3></a>
+			<span>Việt Nam hiện là một trong những nước xuất khẩu nông sản, thực phẩm đứng top 10 thế giới như: gạo, chè, thủy sản, cà phê, hạt tiêu... Việt Nam đã xuất khẩu nông sản đến gần 120 nước và vùng lãnh thổ, bao gồm những thị trường khó tính như Mỹ, Nhật Bản, Hàn Quốc, EU... Lương thực của Việt Nam đủ nuôi sống hơn 100 triệu người dân trong nước và còn đủ nuôi sống thêm hơn 100 triệu dân nữa.</span>
+		</div>
+	</div>
+	<div class="chua-video-content-duoi">
+        <img src="{% static 'images/bao-gao.jpeg' %}">
+
+	</div>
+	<div class="black-final"></div>
+	<div class="content-middle-4-tinnoibat">
+		<div class="a-3">
+			<div class="a-content-middle-4">
+				<a href="">Việt Nam luôn đảm bảo an ninh lương thực trước mọi diễn biến tại Biển Đen</a>
+			</div>
+			<div class="chua-video-cuoi">
+                <img src="{% static 'images/ngoaigiao.jpeg' %}">
+
+			</div>
+		</div>
+		<div class="a-4">
+			<div class="a-content-middle-4">
+				<a href="">Visual Story</a>
+				<a href="">AAA</a>
+			</div>
+			<div class="chua-video">
+				<video controls>
+        			<source src="">
+    			</video>
+			</div>
+		</div>
+    </div>
 {% endblock content %}

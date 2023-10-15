@@ -7,10 +7,10 @@ class Categories(models.Model):
     def __str__(self):
         return self.categories
 
-class Size(models.Model):
-    size = models.CharField(default='', max_length=2)
-    def __str__ (self):
-        return self.size
+# class Size(models.Model):
+#     size = models.CharField(default='', max_length=2)
+#     def __str__ (self):
+#         return self.size
 
 class Items(models.Model):
     yellow = 'Yellow'
@@ -22,10 +22,10 @@ class Items(models.Model):
     title = models.CharField(max_length=50)
     price = models.FloatField(default=50,max_length=50)
     code = models.CharField(default=50,max_length=11)
-    discount = models.IntegerField(default=5, max_length=80)
+    discount = models.IntegerField(default=5)
     color = models.CharField(default=green,max_length=20,choices=color_choice)
     description = models.TextField(default=50,max_length=1000)
-    size = models.ForeignKey(Size, on_delete=models.CASCADE)
+    size = models.CharField(default=10,max_length=5)
     categories= models.ForeignKey(Categories, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -40,11 +40,19 @@ class Img(models.Model):
     def __str__(self):
         return self.product.title
 
+# class Contact(models.Model):
+#     name = models.CharField(max_length=200)
+#     phone_number=models.CharField(max_length=200)
+#     def __str__(self):
+#         return self.name
 
 
 
-
-
+# class Contact(models.Model):
+#     name = models.CharField(max_length=200)
+#     phone_number=models.CharField(max_length=200)
+#     def __str__(self):
+#         return self.name
 
 
 

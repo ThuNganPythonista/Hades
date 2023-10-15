@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}ĐĂNG KÝ QUYÊN GÓP THỰC PHẨM{% endblock title %}
+{% block content %}
+    	<form class="form-register" method="POST" action="">
+            <div class="contain-form-register">
+                <div class="title-register">
+                    <h2>ĐĂNG KÝ QUYÊN GÓP</h2>
+                </div>
+                <div class="chua-2cai-fillin">
+                    <input type="text" name="lname" id="lname-input" placeholder="TÊN THỰC PHẨM">
+                </div>
+                <div class="chua-2cai-fillin">
+                    <input type="text" name="fname" id="fname-input" placeholder="LOẠI THỰC PHẨM : đồ khô, đông lạnh, đồ hộp ...">
+                </div>
+                <div id="gendr">
+                    <input id="radio1" type="radio" value="0" name="customer[gender]">
+                    <label for="radio1">
+                        <span class="lang">Trực Tiếp</span>
+                    </label>
+                    <input id="radio2" type="radio" value="1" name="customer[gender]">
+                    <label for="radio2">
+                        <span class="lang">Trung gian</span>
+                    </label>
+                </div>
+                <div class="chua-2cai-fillin">
+                    <input type="text" name="birthday" id="birthday-input" placeholder="mm/dd/year- Hạn sử dụng">
+                </div>
+                <div class="chua-2cai-fillin">
+                    <input type="text" name="email" id="email-input" placeholder="Số Điện Thoại">
+                </div>
+                <div class="chua-2cai-fillin">
+                    <input type="image" name="password" id="password-input" placeholder="Đăng Tải Ảnh QR CODE">
+                    {% csrf_token %}
+                </div>
+                <div class="contain-button-register">
+                        <button type="submit">DONATE</button>
+                </div>
+            </div>
+            <i class="fas fa-arrow-left" style="color: #000000;"></i><span>Back to Home </span>
+	    </form>ç
+{% endblock content %}

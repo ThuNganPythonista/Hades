@@ -1,29 +1,38 @@
 {% extends 'base.html' %}
 
-{% block title %}HOME PAGE{% endblock title %}
-
+{% load static %}
+{% block title %}GIAI CUU NONG SAN{% endblock title %}
 {% block content %}
-    <div class="contain-all">
-		<button class="close">
-				<i class="fa-solid fa-xmark" style="color: #000000;"></i>
-		</button>
-		<div class="overlay"></div>
-		<div class="language-option">
-				<select>
-					<option value="en">EN</option>
-					<option value="vi">VI</option>
-				</select>
-		</div>
-		<div id="site-search" class="site-nav-container" tabindex="-1">
-			<div class="site-nav-container-last">
-				<p keylanguage="tim_kiem" class="title lang">Tìm kiếm</p>
-				<div class="search-box wpo-wrapper-search">
-					<form action="/search" class="searchform searchform-categoris ultimate-search">
-						<div class="wpo-search-inner">
-							<input keylanguage="tim_kiem_san_pham" required="" id="inputSearchAuto" name="q" maxlength="40" autocomplete="off" class="searchinput input-search search-input langplaceholder" type="text" size="20" placeholder="Tìm kiếm sản phẩm...">
-						</div>
-					</form>
-				</div>
+    <div class="black-title"></div>
+	<div class="fruit-title">
+		<h2>Giải cứu nông sản: Bước đi quan trọng hướng tới zero waste, zero hunger</h2>
+		<h5>Việt Nam là một nước nông nghiệp, với diện tích đất nông nghiệp rộng lớn và nhiều loại nông sản phong phú. Tuy nhiên, tình trạng "được mùa rớt giá" của nông sản Việt Nam vẫn diễn ra hằng năm gây ra hậu quả nghiêm trọng không chỉ là về đời sống của người nông dân mà còn mang đến tác động tiêu cực đến môi trường xung quanh. Thế nên để có thể khắc phục tình trạng này, chúng tôi đã tổng hợp tất cả thông tin của những nhà vườn đang cần bán nông sản thông qua hợp tác xã.</h5>
+	</div>
+	<div class="black-title"></div>
+	<div class="chua-2cai-fruit">
+		<div class="sp-1">
+			<div class="img-fruit">
+				<title> Cam sành Vĩnh Long</title>
+                <img src="{% static 'images/camsanh.jpg' %}">
+				<h5>Giá:<span>13.000 đồng/ kg</span></h5>
+			</div>
+			<div class="img-fruit-2">
+				<title>  Dưa hấu Quảng Ngãi</title>
+                <img src="{% static 'images/watermelon.jpg' %}">
+				<h5>Giá:<span>10.000 đồng/kg</span></h5>
+			</div>
+	</div>
+	<div class="black-title"></div>
+		<div class="sp-2">
+			<div class="img-fruit">
+				<title> Na Đông Triều Quảng Ninh</title>
+			    <img src="{% static 'images/na.jpg' %}">
+				<h5>Giá:<span>20.000 đồng/kg</span></h5>
+			</div>
+			<div class="img-fruit-2">
+				<title> Bí đỏ Quảng Nam</title>
+			    <img src="{% static 'images/bido.jpg' %}">
+				<h5>Giá:<span>6.000 đồng/kg</span></h5>
 			</div>
 		</div>
 	</div>

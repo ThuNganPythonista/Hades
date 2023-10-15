@@ -11,11 +11,30 @@ from django.http import HttpResponseRedirect
 class HomeView(View):
     def get(self,request):
         # logout(request)
-        if request.user.is_authenticated:
-            return HttpResponse(request.user.email)
+        # if request.user.is_authenticated:
+        #      return HttpResponse(request.user.email)
 
         return render(request=request,template_name="home/index.html")
 
+
+class AboutUs(View):
+    def get(self,request):
+        return render(request=request,template_name="home/messenger.html")
+
+class News(View):
+    def get(self,request):
+        return render(request=request,template_name="home/product.html")
+class Sell(View):
+    def get(self,request):
+        return render(request=request,template_name="home/test.html")
+
+class Quyen(View):
+    def get(self,request):
+        return render(request=request,template_name="home/quyengop.html")
+
+class Map(View):
+    def get(self,request):
+        return render(request=request,template_name="home/map.html")
 class Footwear(View):
 
     def get(self,request):
@@ -53,7 +72,7 @@ class Login(View):
             password = request.POST['password']
         except Exception as e:
             password = None
-
+        #
         response = {'status': False, 'message': ''}
         if email == "" or password == "":
             response['message'] = 'Username or password is not empty'
@@ -69,6 +88,18 @@ class Login(View):
         response['status'] = True
         response['message'] = 'User logged in successfully'
         return JsonResponse(response)
+
+    def HomeView(request):
+        if request.method == 'POST':
+            # Xử lý dữ liệu gửi từ biểu mẫu ở đây
+            email = request.POST.get('email')
+            password = request.POST.get('password')
+
+            # Thực hiện các xử lý khác (ví dụ: lưu vào cơ sở dữ liệu)
+
+            # Trả lại kết quả
+            response_data = {'message': 'Log in successfully!'}
+            return JsonResponse(response_data)
 
 class Register(View):
     def get(self, request):
@@ -86,6 +117,10 @@ class Register(View):
             password = None
         return HttpResponse(f" Email: {email} - Password: {password}")
 
+    # views.py
+    from django.http import JsonResponse
+
+
     # def register(request):
     #     form = RegistrationForm()
     #     if request.method == 'POST':
@@ -94,7 +129,7 @@ class Register(View):
     #             form.save()
     #             return HttpResponseRedirect('/')
     #     return render(request, 'home/register.html', {'form': form})
-
+    #
 
 
     # def get(self,request):
