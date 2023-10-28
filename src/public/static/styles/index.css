@@ -193,6 +193,7 @@
 }
 .contain-button-login button{
 	height: 5em;font-weight: 600;width: 12em;text-transform: uppercase;font-family: -apple-system-footnote;
+	cursor: pointer;
 }
 .contain-button-login{
 	margin-top: 30px;
@@ -488,4 +489,41 @@
 		-webkit-transform: translateX(-100%);
 		transform: translateX(-100%);
 	}
+}
+.form-register {
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 8em;
+    gap: 2px;
+}
+.contain-form-register {
+	display: flex;
+    flex-direction: column;
+    gap: 11px;
+    width: 41%;
+}
+.title-register {
+	justify-content: center;
+    display: flex;
+}
+.title-register h2{
+	font-weight: 500;
+}
+.contain-button-register{
+	margin-top: 30px;
+    display: flex;
+}
+.contain-button-register button{
+	background-color: black;
+    color: white;
+    border: none;
+    width: 32%;
+    height: 4em;
+}
+.right a{
+	margin: 0 auto;cursor: pointer;position: fixed;bottom: 41px;background-color: transparent;border: transparent;background-color: #0061ff;border-radius:100px;height:6em;width:6em;margin-left:-2em;z-index:-1;
+
 }

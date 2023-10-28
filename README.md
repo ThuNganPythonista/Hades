@@ -166,10 +166,11 @@ additionally :
         def get(self,request):
           return render(request=request,template_name="home/index.html")
 ```
+
 ```python
     class Login(View):
-        def get(self, request):
-             return render(request=request, template_name="home/login-index.html")
+    def get(self, request):
+        return render(request=request, template_name="home/src/public/templates/user/login-index.html")
 ```
 
 => `class HomeView/Login (View)` class named HomeView/Log inherits View from Django's views module.`def get(self,request)` it calls method GET to handle HTTP. `self` indicates that this is the instance of the class. Other languages do not require "this" or "self", but Python requires. `request`,a module of Python, holds HTTP request data, so you can find more detail in Python lessons. 

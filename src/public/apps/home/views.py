@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from django.views import View
+from .models import Items, Img, Categories
+from django.http.response import HttpResponse
+from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views import View
 from .models import Items, Img
@@ -11,8 +15,8 @@ from django.http import HttpResponseRedirect
 class HomeView(View):
     def get(self,request):
         # logout(request)
-        if request.user.is_authenticated:
-            return HttpResponse(request.user.email)
+        # if request.user.is_authenticated:
+        #      return HttpResponse(request.user.email)
 
         return render(request=request,template_name="home/index.html")
 
@@ -28,74 +32,6 @@ class Footwear(View):
         for item in products:
             print(item.img_set.first().img.url)
         return render(request=request,template_name="home/product.html", context=context)
-
-class Login(View):
-    def get(self, request):
-        return render(request=request, template_name="home/login-index.html")
-
-    def post(self, request):
-        # try:
-        #     email = request.POST['email']
-        # except Exception as e:
-        #     print(e)
-        #     email = None
-        # try:
-        #     password = request.POST['password']
-        # except Exception as e:
-        #     password = None
-
-        try:
-            email = request.POST['username']
-        except Exception as e:
-            print(e)
-            email = None
-        try:
-            password = request.POST['password']
-        except Exception as e:
-            password = None
-
-        response = {'status': False, 'message': ''}
-        if email == "" or password == "":
-            response['message'] = 'Username or password is not empty'
-            return JsonResponse(response)
-
-        user_login = ModelBackend().authenticate(request=request, username=email, password=password)
-        if user_login is None:
-            response['message'] = 'Username or password is not invalid'
-            return JsonResponse(response)
-
-        login(request=request, user=user_login)
-        request.session.set_expiry(10000)
-        response['status'] = True
-        response['message'] = 'User logged in successfully'
-        return JsonResponse(response)
-
-class Register(View):
-    def get(self, request):
-            return render(request=request, template_name="home/register.html")
-    def post(self, request):
-        try:
-            email = request.POST['email']
-        except Exception as e:
-            print(e)
-            email = None
-        try:
-            password = request.POST['password']
-        except Exception as e:
-            print(e)
-            password = None
-        return HttpResponse(f" Email: {email} - Password: {password}")
-
-    # def register(request):
-    #     form = RegistrationForm()
-    #     if request.method == 'POST':
-    #         form = RegistrationForm(request.POST)
-    #         if form.is_valid():
-    #             form.save()
-    #             return HttpResponseRedirect('/')
-    #     return render(request, 'home/register.html', {'form': form})
-
-
 
     # def get(self,request):
     #     productArray = []
@@ -115,3 +51,30 @@ class Register(View):
     #         'products': productArray,
     #     }
     #     return render(request=request,template_name="home/product.html", context=context)
+
+
+class AddProductView(View):
+    def get(self,request):
+        # logout(request)
+        # if request.user.is_authenticated:
+        #      return HttpResponse(request.user.email)
+
+        return render(request=request,template_name="product/addProduct.html")
+
+    def post(self, request):
+        title = request.POST['title']
+        price = request.POST['price']
+        code = request.POST['code']
+        category = request.POST['categories']
+
+        category_instance = Categories.objects.get(id=category)
+        # condition
+        create = Items.objects.create(
+            title=title,
+            price=price,
+            code=code,
+            categories=category_instance
+        )
+
+        return HttpResponse(f"Them moi san pham thanh cong ID: {create.id}")
+

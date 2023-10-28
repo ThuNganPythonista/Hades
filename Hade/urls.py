@@ -14,12 +14,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
-from django.urls import path,include
-from django.conf.urls.static import static
+from django.urls import path, include
 from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path
+from django.views.decorators.csrf import csrf_exempt
+from graphene_django.views import GraphQLView #View for the user interface
+from Hade.schema import schema #Schema we want to query
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('src.public.apps.home.urls'), name="app-home"),
+    path('', include('src.public.apps.home.urls'), name='app-home'),
+    path('user/', include('src.public.apps.user.urls'), name='app-user'),
+    path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema))),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
