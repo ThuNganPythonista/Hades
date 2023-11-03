@@ -137,3 +137,6 @@ GRAPHENE = {
 
 # custom user
 AUTH_USER_MODEL = "user.CustomUser"
+
+LOGIN_URL='/login/'
+EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend'

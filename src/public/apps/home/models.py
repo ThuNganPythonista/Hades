@@ -7,10 +7,10 @@ class Categories(models.Model):
     def __str__(self):
         return self.categories
 
-# class Size(models.Model):
-#     size = models.CharField(default='', max_length=2)
-#     def __str__ (self):
-#         return self.size
+class Size(models.Model):
+    size = models.CharField(default='', max_length=2)
+    def __str__ (self):
+        return self.size
 
 class Items(models.Model):
     yellow = 'Yellow'
@@ -25,7 +25,7 @@ class Items(models.Model):
     discount = models.IntegerField(default=5)
     color = models.CharField(default=green,max_length=20,choices=color_choice)
     description = models.TextField(default=50,max_length=1000)
-    size = models.CharField(default=10,max_length=5)
+    size = models.ForeignKey(Size,on_delete=models.CASCADE)
     categories= models.ForeignKey(Categories, on_delete=models.CASCADE)
 
     def __str__(self):

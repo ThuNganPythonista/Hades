@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html>
+
 {% extends 'base.html' %}
 {% load static %}
 
 
-{% block title %}REGISTER{% endblock title %}
+{% block title %}Log In{% endblock title %}
 {% block content %}
     	<div class="form-login">
-            <form method="POST" action="" class="contain-form-login">
+            <form method="POST" action="login" class="contain-form-login">
                 <div class="title-login">
                     <h2>LOG IN</h2>
                 </div>
@@ -25,7 +24,8 @@
                 <div class="contain-button-login">
                         <button type="submit" >Log In</button>
                         <div>
-                            <a class="lang" href="#">Forgot password?</a>
+{#                            {% url 'password_reset' %}#}
+                            <a class="lang" href="">Forgot password?</a>
                             <span class="lang" >or</span><br><a href ="{% url 'register' %}" class="lang" title="register">REGISTER</a>
                         </div>
                 </div>

@@ -10,7 +10,9 @@ from django.contrib.auth.backends import ModelBackend
 from django.contrib.auth import login, logout
 # from .forms import RegistrationForm
 from django.http import HttpResponseRedirect
-
+from django.urls import reverse_lazy
+from django.contrib.auth.views import PasswordResetView
+from django.contrib.messages.views import SuccessMessageMixin
 
 class HomeView(View):
     def get(self,request):
@@ -32,26 +34,6 @@ class Footwear(View):
         for item in products:
             print(item.img_set.first().img.url)
         return render(request=request,template_name="home/product.html", context=context)
-
-    # def get(self,request):
-    #     productArray = []
-    #     products = Items.objects.all()
-    #     for product in products:
-    #         try:
-    #             product_image = Img.objects.filter(product_id=product.id).all().first().img.url
-    #         except Exception as e:
-    #             product_image = None
-    #             print(f"product_image: {e}")
-    #
-    #         productArray.append({
-    #             'product': product,
-    #             'product_image': product_image
-    #         })
-    #     context = {
-    #         'products': productArray,
-    #     }
-    #     return render(request=request,template_name="home/product.html", context=context)
-
 
 class AddProductView(View):
     def get(self,request):
@@ -77,4 +59,13 @@ class AddProductView(View):
         )
 
         return HttpResponse(f"Them moi san pham thanh cong ID: {create.id}")
+class ResetPasswordView(SuccessMessageMixin, PasswordResetView):
+    template_name = 'users/password_reset.html'
+    email_template_name = 'users/password_reset_email.html'
+    subject_template_name = 'users/password_reset_subject'
+    success_message = "We've emailed you instructions for setting your password, " \
+                      "if an account exists with the email you entered. You should receive them shortly." \
+                      " If you don't receive an email, " \
+                      "please make sure you've entered the address you registered with, and check your spam folder."
+    success_url = reverse_lazy('users-home')
 
